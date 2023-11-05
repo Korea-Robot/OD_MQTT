@@ -539,3 +539,56 @@
 1699168366: Config loaded from ./mosquitto.conf.
 1699168366: Error: Unable to open acl_file "./ACLs/aclfile.acl  # Uncomment and configure to set ACLs".
 1699168366: Error opening acl file "./ACLs/aclfile.acl  # Uncomment and configure to set ACLs".
+1699170172: mosquitto version 2.0.18 starting
+1699170172: Config loaded from ./mosquitto.conf.
+1699170172: Error: Unable to open pwfile "./pw_file  # Uncomment and configure to require username/password".
+1699170172: Error opening password file "./pw_file  # Uncomment and configure to require username/password".
+1699170284: mosquitto version 2.0.18 starting
+1699170284: Config loaded from ./mosquitto.conf.
+1699170284: Error: Unable to open pwfile "./pw_file  # Uncomment and configure to require username/password".
+1699170284: Error opening password file "./pw_file  # Uncomment and configure to require username/password".
+1699170340: mosquitto version 2.0.18 starting
+1699170340: Config loaded from ./mosquitto.conf.
+1699170340: Error: Unable to open pwfile "./pw_file  # Uncomment and configure to require username/password".
+1699170340: Error opening password file "./pw_file  # Uncomment and configure to require username/password".
+1699170342: mosquitto version 2.0.18 starting
+1699170342: Config loaded from ./mosquitto.conf.
+1699170342: Error: Unable to open pwfile "./pw_file  # Uncomment and configure to require username/password".
+1699170342: Error opening password file "./pw_file  # Uncomment and configure to require username/password".
+1699170345: mosquitto version 2.0.18 starting
+1699170345: Config loaded from ./mosquitto.conf.
+1699170345: Error: Unable to open pwfile "./pw_file  # Uncomment and configure to require username/password".
+1699170345: Error opening password file "./pw_file  # Uncomment and configure to require username/password".
+1699170742: mosquitto version 2.0.18 starting
+1699170742: Config loaded from ./mosquitto.conf.
+1699170742: Error: Unable to open pwfile "./pw_file  # Uncomment and configure to require username/password".
+1699170742: Error opening password file "./pw_file  # Uncomment and configure to require username/password".
+1699170849: mosquitto version 2.0.18 starting
+1699170849: Config loaded from ./mosquitto.conf.
+1699170849: Error: Unable to open pwfile "pw_file  # Uncomment and configure to require username/password".
+1699170849: Error opening password file "pw_file  # Uncomment and configure to require username/password".
+1699170925: mosquitto version 2.0.18 starting
+1699170925: Config loaded from ./mosquitto.conf.
+1699170925: Error: Unable to open acl_file "./ACLs/aclfile.acl  # Uncomment and configure to set ACLs".
+1699170925: Error opening acl file "./ACLs/aclfile.acl  # Uncomment and configure to set ACLs".
+1699170956: mosquitto version 2.0.18 starting
+1699170956: Config loaded from ./mosquitto.conf.
+1699170956: Warning: File ./ACLs/aclfile.acl has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 ./ACLs/aclfile.acl`.
+1699170956: Opening ipv6 listen socket on port 1883.
+1699170956: Opening ipv4 listen socket on port 1883.
+1699170956: mosquitto version 2.0.18 running
+1699170960: New connection from ::1:54395 on port 1883.
+1699170960: New client connected from ::1:54395 as object_detector (p2, c1, k60, u'sim').
+1699170960: No will message specified.
+1699170960: Sending CONNACK to object_detector (0, 0)
+1699170963: Received DISCONNECT from object_detector
+1699170963: Client object_detector disconnected.
+1699170969: New connection from ::1:54409 on port 1883.
+1699170969: New client connected from ::1:54409 as object_detector (p2, c1, k60, u'sim').
+1699170969: No will message specified.
+1699170969: Sending CONNACK to object_detector (0, 0)
+1699170972: Received PUBLISH from object_detector (d0, q1, r0, m1, 'object_detection/yolo', ... (47 bytes))
+1699170972: Sending PUBACK to object_detector (m1, rc0)
+1699170975: Received DISCONNECT from object_detector
+1699170975: Client object_detector disconnected.

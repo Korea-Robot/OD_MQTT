@@ -1,2 +1,2 @@
-user object_detector
+user sim
 topic write object_detection/yolo

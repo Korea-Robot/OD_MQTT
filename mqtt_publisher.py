@@ -6,6 +6,8 @@ MQTT_BROKER = 'localhost'
 MQTT_PORT = 1883
 MQTT_TOPIC = 'object_detection/yolo'
 CLIENT_ID = 'object_detector'
+USERNAME = 'sim'  # Replace with your actual username
+PASSWORD = '0604'  # Replace with your actual password
 
 # Function to connect to MQTT Broker
 def on_connect(client, userdata, flags, rc):
@@ -16,6 +18,7 @@ def on_connect(client, userdata, flags, rc):
 
 # Setup MQTT Client
 mqtt_client = mqtt.Client(CLIENT_ID)
+mqtt_client.username_pw_set(USERNAME, PASSWORD)
 mqtt_client.on_connect = on_connect
 mqtt_client.connect(MQTT_BROKER, MQTT_PORT)
 mqtt_client.loop_start()
