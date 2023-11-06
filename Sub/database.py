@@ -1,14 +1,23 @@
 import psycopg2
-from config import DB_NAME, DB_USER, DB_PASS, DB_HOST
+import json
+from config import DBConfig
 
 class Database:
-    def __init__(self):
-        self.conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
+    def __init__(self, config=DBConfig):
+        self.conn = psycopg2.connect(
+            dbname=config.DB_NAME,
+            user=config.DB_USER,
+            password=config.DB_PASS,
+            host=config.DB_HOST
+        )
         self.cursor = self.conn.cursor()
 
     def insert_detection(self, payload):
         try:
-            self.cursor.execute("INSERT INTO detections (data) VALUES (%s)", (json.dumps(payload),))
+            # Ensure payload is a JSON formatted string
+            if not isinstance(payload, str):
+                payload = json.dumps(payload)
+            self.cursor.execute("INSERT INTO detections (data) VALUES (%s)", (payload,))
             self.conn.commit()
         except Exception as e:
             print(f"Database insertion failed: {e}")
