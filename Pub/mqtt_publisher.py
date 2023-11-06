@@ -5,9 +5,9 @@ import paho.mqtt.client as mqtt
 MQTT_BROKER = 'localhost'
 MQTT_PORT = 1883
 MQTT_TOPIC = 'object_detection/yolo'
-CLIENT_ID = 'object_detector'
-USERNAME = 'sim'  # Replace with your actual username
-PASSWORD = '0604'  # Replace with your actual password
+CLIENT_ID = 'object_detector_publisher'
+USERNAME = 'sim'  
+PASSWORD = '0604'
 
 # Function to connect to MQTT Broker
 def on_connect(client, userdata, flags, rc):
