@@ -2,11 +2,11 @@
 
 # Database connection details
 class DBConfig:
-    DB_HOST = 'localhost'
-    DB_NAME = 'your_db_name'
-    DB_USER = 'your_db_user'
-    DB_PASS = 'your_db_password'
-    
+    DB_HOST = 'localhost'  
+    DB_NAME = 'od_mqtt'    
+    DB_USER = 'simsang'    
+    DB_PASS = '19940604'
+
 # MQTT connection details
 class MQTTConfig:
     BROKER = 'localhost'

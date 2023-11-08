@@ -1,3 +1,4 @@
+# database.py
 import psycopg2
 import json
 from config import DBConfig
