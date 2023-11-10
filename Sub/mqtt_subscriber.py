@@ -8,7 +8,7 @@ class MQTT_SUB:
     def __init__(self, db, sound_player, qos=1):
         self.db = db
         self.sound_player = sound_player
-        self.client = mqtt.Client(MQTTConfig.CLIENT_ID)
+        self.client = mqtt.Client(MQTTConfig.CLIENT_ID, clean_session=False)
         self.client.username_pw_set(MQTTConfig.USERNAME, MQTTConfig.PASSWORD)
         self.qos = qos
         self.client.on_connect = self.on_connect
