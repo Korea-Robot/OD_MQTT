@@ -1,8 +1,6 @@
 /OD_MQTT/
 /.mypy_cache
 /__pycache__
-/pw_file
 /yolov8s.pt
-/Sub
+./Sub
 /Pub/__pycache__
-/DB/data
