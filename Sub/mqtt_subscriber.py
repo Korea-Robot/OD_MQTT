@@ -2,11 +2,10 @@
 import json
 import logging
 import paho.mqtt.client as mqtt
-from config import MQTTConfig
+from config import MQTTConfig, Detection
 from threading import Thread
 class MQTT_SUB:
-    def __init__(self, db, sound_player, qos=1):
-        self.db = db
+    def __init__(self, sound_player, qos=1):
         self.sound_player = sound_player
         self.client = mqtt.Client(MQTTConfig.CLIENT_ID, clean_session=False)
         self.client.username_pw_set(MQTTConfig.USERNAME, MQTTConfig.PASSWORD)
@@ -28,10 +27,9 @@ class MQTT_SUB:
         payload_data = json.loads(msg.payload.decode('utf-8'))
 
         # Database insert operation
-        self.db.insert_detection(payload_data)
 
         # Sound playing logic
-        if 'keyboard' in payload_data and not self.sound_player.sound_lock.locked():
+        if Detection.FIRE in payload_data and not self.sound_player.sound_lock.locked():
             Thread(target=self.sound_player.play_sound).start()
             
     def run(self):
@@ -42,4 +40,3 @@ class MQTT_SUB:
             print("Script interrupted by user")
         finally:
             self.client.disconnect()
-            self.db.close()

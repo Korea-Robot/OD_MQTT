@@ -6,7 +6,7 @@ import colorsys
 from collections import Counter
 
 class ObjectDetector:
-    def __init__(self, model_path="yolov8s.pt", device="mps"):
+    def __init__(self, model_path="best.pt", device="mps"):
         self.model = YOLO(model_path)
         self.device = device
         self.colors = self._generate_colors(80)  # Assuming 80 classes in the model

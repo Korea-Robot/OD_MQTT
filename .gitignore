@@ -3,6 +3,6 @@
 /__pycache__
 /pw_file
 /yolov8s.pt
-/Sub/__pycache__
+/Sub
 /Pub/__pycache__
 /DB/data

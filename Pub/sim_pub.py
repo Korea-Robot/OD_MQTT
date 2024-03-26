@@ -3,12 +3,12 @@ import cv2
 import json
 from detector import ObjectDetector
 from mqtt_publisher import MQTTPublisher
-
+from config import Cam_src
 def main():
     object_detector = ObjectDetector()
     mqtt_publisher = MQTTPublisher()
 
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(Cam_src.URL)
     try:
         while True:
             ret, frame = cap.read()
