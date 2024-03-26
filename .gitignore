@@ -2,5 +2,5 @@
 /.mypy_cache
 /__pycache__
 /yolov8s.pt
-./Sub
+Sub
 /Pub/__pycache__
